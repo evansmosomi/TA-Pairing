@@ -5,69 +5,60 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import "../index.css";
-import { RadioButtonCheckedOutlined } from "@material-ui/icons";
-// import { FormControlLabel } from "@material-ui/core";
-// import Radio from "@mui/material/Radio";
-// import RadioGroup from "@mui/material/RadioGroup";
-// import FormLabel from "@mui/material/FormLabel";
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import FormControl from '@mui/material/FormControl';
-export class RoleSelector extends Component {
-  continue = (e) => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
+import StudentForm from "./StudentForm";
+import ProfessorForm from "./ProfessorForm";
+import { Outlet, Link } from "react-router-dom";
 
+class App extends Component {
   render() {
-    const { values, handleChange } = this.props;
-
-    // const [value, setValue] = React.useState("female");
-
-    // const handleChange = (event) => {
-    //   setValue(event.target.value);
-    // };
-
     return (
       <MuiThemeProvider>
         <>
-          <Dialog open fullWidth maxWidth="sm">
-            <h1>StudentPair - Student View</h1>
+          <Dialog open fullWidth maxWidth="m" fullHeight="m">
+            <center>
+              <h1>Welcome to Student Pair</h1>
+            </center>
             <AppBar title="Enter User Details" />
-
-            <RadioButtonCheckedOutlined
-              placeholder="Professor, Teaching Assistant or Lab Instructor"
+            <br></br>
+            <Button
+              color="primary"
+              variant="contained"
               label="What is your profile at this school?"
-              onChange={handleChange("profile")}
-              defaultValue={values.profile}
+              id="student"
               margin="normal"
               fullWidth
-            />
-            <br />
-            {/* <FormLabel id="demo-controlled-radio-buttons-group">
-              Gender
-            </FormLabel> */}
-            {/* <RadioGroup
-              aria-labelledby="demo-controlled-radio-buttons-group"
-              name="controlled-radio-buttons-group"
-              value={value}
-              onChange={handleChange}
             >
-              <FormControlLabel
-                value="female"
-                control={<Radio />}
-                label="Female"
-              />
-              <FormControlLabel value="male" control={<Radio />} label="Male" />
-            </RadioGroup> */}
-            <br />
-            <Button color="primary" variant="contained" onClick={this.continue}>
-              Continue
+              <Link to="/studentform">Student</Link>
             </Button>
+            <br></br>
+            <Button
+              color="secondary"
+              variant="contained"
+              label="What is your profile at this school?"
+              id="lab instructor"
+              margin="normal"
+              fullWidth
+            >
+              <Link to="/studentform">Lab Instructor</Link>
+            </Button>
+            <br></br>
+            <Button
+              color="primary"
+              variant="contained"
+              label="What is your profile at this school?"
+              id="professor"
+              margin="normal"
+              fullWidth
+            >
+              <Link to="/professorform">Professor</Link>
+            </Button>
+            <br />
           </Dialog>
         </>
+        <Outlet />
       </MuiThemeProvider>
     );
   }
 }
 
-export default RoleSelector;
+export default App;

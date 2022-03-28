@@ -103,6 +103,23 @@ Spreadsheet.ComputeAlgorithmOnFile = async function (filename) {
   console.log(Paired_Candidates.length);
 
   return Paired_Candidates.length, Unpaired.length;
+
+  [
+    'data'=
+    {
+      labels: [
+        '{{label}}',
+        {
+         Unpaired_Students: '{{Unpaired_Students()}}',
+          Paired_Students: '{{Paired_Students()}}'
+        }
+      ],
+
+      datasets: data[{
+        '{{Paired_Candidates.length()}}', '{{Unpaired.length()}}',
+      }]
+    }
+   ]
 };
 
 module.exports.Spreadsheet = Spreadsheet;

@@ -4,7 +4,7 @@ import FormPersonalDetails from "./FormPersonalDetails";
 import Confirm from "./Confirm";
 import Success from "./Success";
 
-export class StudentForm extends Component {
+export class ProfessorForm extends Component {
   state = {
     step: 1,
     name: "",
@@ -101,4 +101,4 @@ export class StudentForm extends Component {
   }
 }
 
-export default StudentForm;
+export default ProfessorForm;

@@ -5,6 +5,7 @@ import Confirm from "./Confirm";
 import Success from "./Success";
 import ProfessorDetails from "./ProfessorDetails";
 import ProfessorCourseSelections from "./ProfessorCourseSelections";
+import RoleSelector from "./RoleSelector";
 
 export class StudentForm extends Component {
   state = {
@@ -69,6 +70,16 @@ export class StudentForm extends Component {
     switch (step) {
       case 1:
         return (
+          <RoleSelector
+            //profiles
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 2:
+        return (
           <StudentDetails
             // <ProfessorDetails
             nextStep={this.nextStep}
@@ -76,7 +87,7 @@ export class StudentForm extends Component {
             values={values}
           />
         );
-      case 2:
+      case 3:
         return (
           // <ProfessorCourseDetails
           <FormPersonalDetails
@@ -86,7 +97,7 @@ export class StudentForm extends Component {
             values={values}
           />
         );
-      case 3:
+      case 4:
         return (
           <Confirm
             nextStep={this.nextStep}
@@ -94,7 +105,7 @@ export class StudentForm extends Component {
             values={values}
           />
         );
-      case 4:
+      case 5:
         return <Success />;
       default:
         console.log("Capstone TA Assignment");

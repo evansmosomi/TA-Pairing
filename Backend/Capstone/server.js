@@ -14,7 +14,7 @@ app.get("/", function (req, res) {
 app.use("/api", require("./routes/hello"));
 
 app.listen(3001, function () {
-  console.log("Listening on port 3000!");
+  console.log("Listening on port 3001!");
 });
 
 //Weights for each input

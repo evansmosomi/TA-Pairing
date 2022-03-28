@@ -17,6 +17,11 @@ export class StudentDetails extends Component {
     this.props.nextStep();
   };
 
+  back = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
+
   render() {
     const { values, handleChange } = this.props;
 
@@ -57,22 +62,7 @@ export class StudentDetails extends Component {
               fullWidth
             />
             <br />
-            {/* <FormLabel id="demo-controlled-radio-buttons-group">
-              Gender
-            </FormLabel> */}
-            {/* <RadioGroup
-              aria-labelledby="demo-controlled-radio-buttons-group"
-              name="controlled-radio-buttons-group"
-              value={value}
-              onChange={handleChange}
-            >
-              <FormControlLabel
-                value="female"
-                control={<Radio />}
-                label="Female"
-              />
-              <FormControlLabel value="male" control={<Radio />} label="Male" />
-            </RadioGroup> */}
+
             <br />
             <Button color="primary" variant="contained" onClick={this.continue}>
               Continue
