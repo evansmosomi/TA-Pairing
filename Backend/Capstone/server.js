@@ -4,6 +4,9 @@ const { Choices } = require("./Choices");
 const { Course } = require("./Course");
 const { Spreadsheet } = require("./data");
 const app = express();
+var root = path.dirname(require.main.filename);
+
+
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -40,7 +43,7 @@ console.log(Test_Course.PotentialCandidates)
 console.log("--------------Best choice for this course is: ");
 console.log(Test_Course.getCandidate())
  */
-Spreadsheet.ComputeAlgorithmOnFile("./Capstone.xlsx");
+Spreadsheet.ComputeAlgorithmOnFile(root + "/Capstone.xlsx");
 
 //ComputeTable();
 
