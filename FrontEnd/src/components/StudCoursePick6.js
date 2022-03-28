@@ -27,8 +27,8 @@ export default class StudCoursePick6 extends Component {
             <TextField
               placeholder="Course"
               label="Select your third course choice"
-              onChange={handleChange("course")}
-              defaultValue={values.course}
+              onChange={handleChange("course6")}
+              defaultValue={values.course6}
               margin="normal"
               fullWidth
             />
@@ -37,8 +37,8 @@ export default class StudCoursePick6 extends Component {
             <TextField
               placeholder="Previous experience"
               label="Have you instructed this course before as a TA?"
-              onChange={handleChange("experience")}
-              defaultValue={values.experience}
+              onChange={handleChange("experience6")}
+              defaultValue={values.experience6}
               margin="normal"
               fullWidth
             />
@@ -46,8 +46,8 @@ export default class StudCoursePick6 extends Component {
             <TextField
               placeholder="Prerequisites obtained"
               label="Are you in the same faculty/program of study as the course you selected? "
-              onChange={handleChange("prerequisites")}
-              defaultValue={values.prerequisites}
+              onChange={handleChange("prerequisites6")}
+              defaultValue={values.prerequisites6}
               margin="normal"
               fullWidth
             />
@@ -55,8 +55,8 @@ export default class StudCoursePick6 extends Component {
             <TextField
               placeholder="Previous experience"
               label="Have you passed this course (required)?"
-              onChange={handleChange("experience2")}
-              defaultValue={values.experience}
+              onChange={handleChange("pass6")}
+              defaultValue={values.pass6}
               margin="normal"
               fullWidth
             />
@@ -64,7 +64,7 @@ export default class StudCoursePick6 extends Component {
             <TextField
               placeholder="Summary Bio"
               label="In under 200 words, why do you believe you are a perfect candidate to be a TA?"
-              onChange={handleChange("experience2")}
+              onChange={handleChange("bio")}
               defaultValue={values.bio}
               margin="normal"
               fullWidth

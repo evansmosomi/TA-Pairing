@@ -27,8 +27,8 @@ export default class StudCoursePick3 extends Component {
             <TextField
               placeholder="Course"
               label="Select your third course choice"
-              onChange={handleChange("course")}
-              defaultValue={values.course}
+              onChange={handleChange("course3")}
+              defaultValue={values.course3}
               margin="normal"
               fullWidth
             />
@@ -37,8 +37,8 @@ export default class StudCoursePick3 extends Component {
             <TextField
               placeholder="Previous experience"
               label="Have you instructed this course before as a TA?"
-              onChange={handleChange("experience")}
-              defaultValue={values.experience}
+              onChange={handleChange("experience3")}
+              defaultValue={values.experience3}
               margin="normal"
               fullWidth
             />
@@ -46,8 +46,8 @@ export default class StudCoursePick3 extends Component {
             <TextField
               placeholder="Prerequisites obtained"
               label="Are you in the same faculty/program of study as the course you selected? "
-              onChange={handleChange("prerequisites")}
-              defaultValue={values.prerequisites}
+              onChange={handleChange("prerequisites3")}
+              defaultValue={values.prerequisites3}
               margin="normal"
               fullWidth
             />
@@ -55,8 +55,8 @@ export default class StudCoursePick3 extends Component {
             <TextField
               placeholder="Previous experience"
               label="Have you passed this course (required)?"
-              onChange={handleChange("experience2")}
-              defaultValue={values.experience}
+              onChange={handleChange("pass3")}
+              defaultValue={values.pass3}
               margin="normal"
               fullWidth
             />

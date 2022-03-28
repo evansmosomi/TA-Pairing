@@ -29,8 +29,8 @@ export default class ProfStudentPick1 extends Component {
             <TextField
               placeholder="First course"
               label="Enter your first course name"
-              onChange={handleChange("profcourse1")}
-              defaultValue={values.course}
+              onChange={handleChange("course1")}
+              defaultValue={values.course1}
               margin="normal"
               fullWidth
             />
@@ -40,7 +40,7 @@ export default class ProfStudentPick1 extends Component {
               placeholder="#1"
               label="1st Student Choice"
               onChange={handleChange("student1")}
-              defaultValue={values.course}
+              defaultValue={values.student1}
               margin="normal"
               fullWidth
             />
@@ -49,7 +49,7 @@ export default class ProfStudentPick1 extends Component {
               placeholder="#2"
               label="2nd Student Choice"
               onChange={handleChange("student2")}
-              defaultValue={values.semester}
+              defaultValue={values.student2}
               margin="normal"
               fullWidth
             />
@@ -57,7 +57,7 @@ export default class ProfStudentPick1 extends Component {
               placeholder="#3"
               label="3rd Student Choice"
               onChange={handleChange("student3")}
-              defaultValue={values.experience}
+              defaultValue={values.student3}
               margin="normal"
               fullWidth
             />

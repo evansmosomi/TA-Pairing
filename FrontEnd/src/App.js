@@ -19,6 +19,7 @@ class App extends Component {
             <Route path="labform" element={<StudentForm />} />
             <Route path="professorform" element={<ProfessorForm />} />
             <Route path="report" element={<Report />} />
+            <Route path="visual" element={<Chartgraph />} />
           </Routes>
         </BrowserRouter>
       </>

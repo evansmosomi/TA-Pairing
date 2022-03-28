@@ -29,8 +29,8 @@ export default class ProfStudentPick6 extends Component {
             <TextField
               placeholder="Third course"
               label="Enter your third course name"
-              onChange={handleChange("profcourse1")}
-              defaultValue={values.course}
+              onChange={handleChange("course6")}
+              defaultValue={values.course6}
               margin="normal"
               fullWidth
             />
@@ -39,8 +39,8 @@ export default class ProfStudentPick6 extends Component {
             <TextField
               placeholder="#1"
               label="1st Student Choice"
-              onChange={handleChange("student1")}
-              defaultValue={values.course}
+              onChange={handleChange("student16")}
+              defaultValue={values.student16}
               margin="normal"
               fullWidth
             />
@@ -48,16 +48,16 @@ export default class ProfStudentPick6 extends Component {
             <TextField
               placeholder="#2"
               label="2nd Student Choice"
-              onChange={handleChange("student2")}
-              defaultValue={values.semester}
+              onChange={handleChange("student17")}
+              defaultValue={values.student17}
               margin="normal"
               fullWidth
             />
             <TextField
               placeholder="#3"
               label="3rd Student Choice"
-              onChange={handleChange("student3")}
-              defaultValue={values.experience}
+              onChange={handleChange("student18")}
+              defaultValue={values.student18}
               margin="normal"
               fullWidth
             />
@@ -65,8 +65,8 @@ export default class ProfStudentPick6 extends Component {
             <TextField
               placeholder="Notes"
               label="Special Requests"
-              onChange={handleChange("prerequisites")}
-              defaultValue={values.prerequisites}
+              onChange={handleChange("bio")}
+              defaultValue={values.bio}
               margin="normal"
               fullWidth
             />
