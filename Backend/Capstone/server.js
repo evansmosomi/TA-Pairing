@@ -6,8 +6,6 @@ const { Spreadsheet } = require("./data");
 const app = express();
 var root = path.dirname(require.main.filename);
 
-
-
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (req, res) {

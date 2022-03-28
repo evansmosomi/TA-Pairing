@@ -5,7 +5,7 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText } from "@material-ui/core/";
 import Button from "@material-ui/core/Button";
 
-export class Confirm extends Component {
+export default class Confirm extends Component {
   continue = (e) => {
     e.preventDefault();
     // PROCESS FORM //
@@ -73,6 +73,8 @@ export class Confirm extends Component {
               </ListItem>
               <ListItem>
                 <ListItemText primary="Experience" secondary={experience} />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary="Summary" secondary={bio} />
               </ListItem>
             </List>
@@ -91,5 +93,3 @@ export class Confirm extends Component {
     );
   }
 }
-
-export default Confirm;

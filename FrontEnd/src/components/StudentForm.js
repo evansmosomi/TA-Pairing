@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import StudentDetails from "./StudentDetails";
-import FormPersonalDetails from "./FormPersonalDetails";
 import Confirm from "./Confirm";
 import Success from "./Success";
-import ProfessorDetails from "./ProfessorDetails";
-import ProfessorCourseSelections from "./ProfessorCourseSelections";
-import RoleSelector from "./RoleSelector";
+import StudCoursePick1 from "./StudCoursePick1";
+import StudCoursePick6 from "./StudCoursePick6";
+import StudCoursePick2 from "./StudCoursePick2";
+import StudCoursePick3 from "./StudCoursePick3";
+import StudCoursePick4 from "./StudCoursePick4";
+import StudCoursePick5 from "./StudCoursePick5";
 
-export class StudentForm extends Component {
+export default class StudentForm extends Component {
   state = {
     step: 1,
     name: "",
@@ -70,27 +72,24 @@ export class StudentForm extends Component {
     switch (step) {
       case 1:
         return (
-          <RoleSelector
-            //profiles
+          <StudentDetails
             nextStep={this.nextStep}
-            prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
           />
         );
       case 2:
         return (
-          <StudentDetails
-            // <ProfessorDetails
+          <StudCoursePick1
             nextStep={this.nextStep}
+            prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
           />
         );
       case 3:
         return (
-          // <ProfessorCourseDetails
-          <FormPersonalDetails
+          <StudCoursePick2
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             handleChange={this.handleChange}
@@ -99,18 +98,52 @@ export class StudentForm extends Component {
         );
       case 4:
         return (
+          <StudCoursePick3
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 5:
+        return (
+          <StudCoursePick4
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 6:
+        return (
+          <StudCoursePick5
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 7:
+        return (
+          <StudCoursePick6
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 8:
+        return (
           <Confirm
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             values={values}
           />
         );
-      case 5:
+      case 9:
         return <Success />;
       default:
         console.log("Capstone TA Assignment");
     }
   }
 }
-
-export default StudentForm;

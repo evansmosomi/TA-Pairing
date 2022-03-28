@@ -33,7 +33,7 @@ export class ProfessorDetails extends Component {
             <AppBar title="Enter User Details" />
             <TextField
               placeholder="Name"
-              label="Enter your professor name"
+              label="Enter your full name"
               onChange={handleChange("name")}
               defaultValue={values.name}
               margin="normal"
@@ -41,30 +41,23 @@ export class ProfessorDetails extends Component {
             />
             <TextField
               placeholder="ID"
-              label="Studet/Staff Banner ID"
+              label="Staff Banner ID"
               onChange={handleChange("id")}
               defaultValue={values.id}
               margin="normal"
               fullWidth
             />
 
+            <TextField
+              placeholder="Profile"
+              label="What is your email address?"
+              onChange={handleChange("email")}
+              defaultValue={values.email}
+              margin="normal"
+              fullWidth
+            />
             <br />
-            {/* <FormLabel id="demo-controlled-radio-buttons-group">
-              Gender
-            </FormLabel> */}
-            {/* <RadioGroup
-              aria-labelledby="demo-controlled-radio-buttons-group"
-              name="controlled-radio-buttons-group"
-              value={value}
-              onChange={handleChange}
-            >
-              <FormControlLabel
-                value="female"
-                control={<Radio />}
-                label="Female"
-              />
-              <FormControlLabel value="male" control={<Radio />} label="Male" />
-            </RadioGroup> */}
+
             <br />
             <Button color="primary" variant="contained" onClick={this.continue}>
               Continue

@@ -5,7 +5,7 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
-export class FormPersonalDetails extends Component {
+export default class StudCoursePick4 extends Component {
   continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
@@ -23,7 +23,7 @@ export class FormPersonalDetails extends Component {
         <>
           <Dialog open fullWidth maxWidth="sm">
             <AppBar title="Enter Course Details" />
-
+            <h2>Winter 2023 Courses</h2>
             <TextField
               placeholder="Course"
               label="Select your first course choice"
@@ -33,23 +33,7 @@ export class FormPersonalDetails extends Component {
               fullWidth
             />
             <br />
-            <TextField
-              placeholder="Second choice"
-              label="Select your second course choice"
-              onChange={handleChange("course2")}
-              defaultValue={values.semester}
-              margin="normal"
-              fullWidth
-            />
 
-            <TextField
-              placeholder="Third choice"
-              label="Select your third course choice"
-              onChange={handleChange("course3")}
-              defaultValue={values.semester}
-              margin="normal"
-              fullWidth
-            />
             <TextField
               placeholder="Previous experience"
               label="Have you instructed this course before as a TA?"
@@ -61,7 +45,7 @@ export class FormPersonalDetails extends Component {
             <br />
             <TextField
               placeholder="Prerequisites obtained"
-              label="Are you in the same program of study as the course you selected? (Bachelor's/ Master's/ PhD)"
+              label="Are you in the same faculty/program of study as the course you selected? "
               onChange={handleChange("prerequisites")}
               defaultValue={values.prerequisites}
               margin="normal"
@@ -78,15 +62,6 @@ export class FormPersonalDetails extends Component {
             />
             <br />
 
-            <TextField
-              placeholder="Summary Bio"
-              label="Indicate in under 200 words, why you believe you are a perfect candidate to be a TA (prior experience, coursework etc.)?"
-              onChange={handleChange("experience2")}
-              defaultValue={values.bio}
-              margin="normal"
-              fullWidth
-            />
-
             <Button color="secondary" variant="contained" onClick={this.back}>
               Back
             </Button>
@@ -100,5 +75,3 @@ export class FormPersonalDetails extends Component {
     );
   }
 }
-
-export default FormPersonalDetails;

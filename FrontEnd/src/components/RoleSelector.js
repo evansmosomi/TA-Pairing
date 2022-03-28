@@ -8,9 +8,11 @@ import "../index.css";
 import StudentForm from "./StudentForm";
 import ProfessorForm from "./ProfessorForm";
 import { Outlet, Link } from "react-router-dom";
+import { blue } from "@mui/material/colors";
 
 class App extends Component {
   render() {
+    const blue = "#81d4fa";
     return (
       <MuiThemeProvider>
         <>
@@ -25,8 +27,6 @@ class App extends Component {
               variant="contained"
               label="What is your profile at this school?"
               id="student"
-              margin="normal"
-              fullWidth
             >
               <Link to="/studentform">Student</Link>
             </Button>
@@ -37,18 +37,15 @@ class App extends Component {
               label="What is your profile at this school?"
               id="lab instructor"
               margin="normal"
-              fullWidth
             >
-              <Link to="/studentform">Lab Instructor</Link>
+              <Link to="/labform">Lab Instructor</Link>
             </Button>
             <br></br>
             <Button
-              color="primary"
               variant="contained"
               label="What is your profile at this school?"
               id="professor"
               margin="normal"
-              fullWidth
             >
               <Link to="/professorform">Professor</Link>
             </Button>

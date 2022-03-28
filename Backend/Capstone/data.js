@@ -104,22 +104,22 @@ Spreadsheet.ComputeAlgorithmOnFile = async function (filename) {
 
   return Paired_Candidates.length, Unpaired.length;
 
-  [
-    'data'=
-    {
-      labels: [
-        '{{label}}',
-        {
-         Unpaired_Students: '{{Unpaired_Students()}}',
-          Paired_Students: '{{Paired_Students()}}'
-        }
-      ],
+  // [
+  //   'data'=
+  //   {
+  //     labels: [
+  //       '{{label}}',
+  //       {
+  //        Unpaired_Students: '{{Unpaired_Students()}}',
+  //         Paired_Students: '{{Paired_Students()}}'
+  //       }
+  //     ],
 
-      datasets: data[{
-        '{{Paired_Candidates.length()}}', '{{Unpaired.length()}}',
-      }]
-    }
-   ]
+  //     datasets: data[{
+  //       '{{Paired_Candidates.length()}}', '{{Unpaired.length()}}',
+  //     }]
+  //   }
+  //  ]
 };
 
 module.exports.Spreadsheet = Spreadsheet;

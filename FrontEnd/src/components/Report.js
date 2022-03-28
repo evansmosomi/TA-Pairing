@@ -5,7 +5,7 @@ import axios from "axios";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export default class Chartgraph extends React.Component {
+export default class Report extends React.Component {
   constructor(props) {
     super(props);
 
@@ -23,6 +23,7 @@ export default class Chartgraph extends React.Component {
   render() {
     return (
       <div className="chart">
+        REPORT
         <Pie
           data={{
             labels: this.state.data.labels,

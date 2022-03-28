@@ -5,7 +5,7 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText } from "@material-ui/core/";
 import Button from "@material-ui/core/Button";
 
-export class ProfConfirm extends Component {
+export default class ProfConfirm extends Component {
   continue = (e) => {
     e.preventDefault();
     // PROCESS FORM //
@@ -71,5 +71,3 @@ export class ProfConfirm extends Component {
     );
   }
 }
-
-export default ProfConfirm;

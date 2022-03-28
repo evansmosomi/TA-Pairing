@@ -19,11 +19,17 @@ code {
 
 button.MuiButton-containedSecondary {
   margin-bottom: 10px;
+  color: #a13838;
 }
 
 button.MuiButton-containedPrimary {
   color: white;
   background-color: black;
+}
+
+button.MuiButton-root:hover {
+  text-decoration: none;
+  background-color: gray;
 }
 
 * {
