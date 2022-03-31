@@ -3,12 +3,11 @@ const XLSX = require("xlsx");
 const { Choices } = require("./Choices");
 const { Course } = require("./Course");
 const { Functions } = require("./Functions");
-
 var Spreadsheet = {};
-var List_Of_Courses = [];
-var Paired_Candidates = [];
-var List_Of_Students = {};
 Spreadsheet.ComputeAlgorithmOnFile = async function (filename) {
+  var List_Of_Courses = [];
+  var Paired_Candidates = [];
+  var List_Of_Students = {};
   const workbook2 = new Excel.Workbook();
   await workbook2.xlsx.readFile(filename);
   const workbook = XLSX.readFile(filename);
@@ -20,9 +19,9 @@ Spreadsheet.ComputeAlgorithmOnFile = async function (filename) {
     Number_Of_Courses < Total_Courses;
     Number_Of_Courses++
   ) {
-    var Sheet_Course = workbook.Workbook.Names[Number_Of_Courses]; //mobile app dev
+    var Sheet_Course = workbook.Workbook.Names[Number_Of_Courses]; 
 
-    const Course_Name = workbook2.worksheets[0]; //mobile app dev
+    const Course_Name = workbook2.worksheets[0]; 
 
     var range = XLSX.utils.decode_range(Sheet_Course.Ref);
     var worksheetRange = XLSX.utils.decode_range(worksheet["!ref"]);
@@ -102,24 +101,10 @@ Spreadsheet.ComputeAlgorithmOnFile = async function (filename) {
   console.log(Unpaired.length);
   console.log(Paired_Candidates.length);
 
-  return Paired_Candidates.length, Unpaired.length;
-
-  // [
-  //   'data'=
-  //   {
-  //     labels: [
-  //       '{{label}}',
-  //       {
-  //        Unpaired_Students: '{{Unpaired_Students()}}',
-  //         Paired_Students: '{{Paired_Students()}}'
-  //       }
-  //     ],
-
-  //     datasets: data[{
-  //       '{{Paired_Candidates.length()}}', '{{Unpaired.length()}}',
-  //     }]
-  //   }
-  //  ]
+  return {
+  "Paired TA's": Paired_Candidates.length, 
+  "Unpaired TA's": Unpaired.length
+  }
 };
 
 module.exports.Spreadsheet = Spreadsheet;

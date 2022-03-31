@@ -12,36 +12,16 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + "/index.htm"));
 });
 
-app.use("/api", require("./routes/hello"));
+app.get('/api', async function(req, res) {
+    res.json(await Spreadsheet.ComputeAlgorithmOnFile(root + "/Capstone.xlsx"));
+});
 
 app.listen(3001, function () {
-  console.log("Listening on port 3001!");
+  console.log("Listening on port 3000!");
 });
 
 //Weights for each input
 const { Weights } = require("./Weights");
-
-/* var Test_Course = new Course("Machine Learning", 1)
-
-        
-var Choice = new Choices("Evans","Mosomi",1,1,1,1,1,1);
-var Choice2 = new Choices("test","test",1,1,1,2,1,1);
-var Best_Choice = new Choices("Naweed","Adil",1,1,1,1,1,2);
-
-Test_Course.addChoice(Choice);
-Test_Course.addChoice(Choice2);
-Test_Course.addChoice(Best_Choice);
-console.log(Choice)
-console.log(Choice2)
-console.log(Best_Choice)
-
-Test_Course.sortCandidates();
-console.log(Test_Course.PotentialCandidates)
-
-console.log("--------------Best choice for this course is: ");
-console.log(Test_Course.getCandidate())
- */
-Spreadsheet.ComputeAlgorithmOnFile(root + "/Capstone.xlsx");
 
 //ComputeTable();
 
