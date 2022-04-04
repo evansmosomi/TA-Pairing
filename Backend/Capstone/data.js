@@ -19,9 +19,9 @@ Spreadsheet.ComputeAlgorithmOnFile = async function (filename) {
     Number_Of_Courses < Total_Courses;
     Number_Of_Courses++
   ) {
-    var Sheet_Course = workbook.Workbook.Names[Number_Of_Courses]; 
+    var Sheet_Course = workbook.Workbook.Names[Number_Of_Courses];
 
-    const Course_Name = workbook2.worksheets[0]; 
+    const Course_Name = workbook2.worksheets[0];
 
     var range = XLSX.utils.decode_range(Sheet_Course.Ref);
     var worksheetRange = XLSX.utils.decode_range(worksheet["!ref"]);
@@ -102,9 +102,9 @@ Spreadsheet.ComputeAlgorithmOnFile = async function (filename) {
   console.log(Paired_Candidates.length);
 
   return {
-  "Paired TA's": Paired_Candidates.length, 
-  "Unpaired TA's": Unpaired.length
-  }
+    Paired: Paired_Candidates.length,
+    Unpaired: Unpaired.length,
+  };
 };
 
 module.exports.Spreadsheet = Spreadsheet;

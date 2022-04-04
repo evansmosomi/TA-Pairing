@@ -5,7 +5,6 @@ import Chartgraph from "./components/Chartgraph";
 import StudentForm from "./components/StudentForm";
 import RoleSelector from "./components/RoleSelector";
 import ProfessorForm from "./components/ProfessorForm";
-
 import Report from "./components/Report";
 
 class App extends Component {
@@ -16,6 +15,7 @@ class App extends Component {
           <Routes>
             <Route path="/" element={<RoleSelector />} />
             <Route path="studentform" element={<StudentForm />} />
+            <Route path="report" element={<Report />} />
             <Route path="labform" element={<StudentForm />} />
             <Route path="professorform" element={<ProfessorForm />} />
             <Route path="report" element={<Report />} />

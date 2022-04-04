@@ -7,7 +7,6 @@ import ProfStudentPick3 from "./ProfStudentPick3";
 import ProfStudentPick4 from "./ProfStudentPick4";
 import ProfStudentPick6 from "./ProfStudentPick6";
 import ProfStudentPick5 from "./ProfStudentPick5";
-import Confirm from "./Confirm";
 import ProfConfirm from "./ProfConfirm";
 
 export default class ProfessorForm extends Component {

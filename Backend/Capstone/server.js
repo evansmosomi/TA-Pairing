@@ -12,11 +12,11 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + "/index.htm"));
 });
 
-app.get('/api', async function(req, res) {
-    res.json(await Spreadsheet.ComputeAlgorithmOnFile(root + "/Capstone.xlsx"));
+app.get("/api", async function (req, res) {
+  res.json(await Spreadsheet.ComputeAlgorithmOnFile(root + "/Capstone.xlsx"));
 });
 
-app.listen(3001, function () {
+app.listen(3000, function () {
   console.log("Listening on port 3000!");
 });
 

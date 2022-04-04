@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Pie, Line } from "react-chartjs-2";
-import axios from "axios";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -9,36 +7,34 @@ export default class Report extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { data: [] };
+    this.state = { tadata: [] };
   }
 
   componentDidMount() {
-    this.UserList();
+    this.callAPI();
   }
 
-  UserList() {
-    fetch("/api/").then(({ results }) => this.setState({ data: results }));
+  callAPI() {
+    fetch("/api/")
+      .then((response) => {
+        return response.json();
+      })
+      .then((json_data) => {
+        console.log(json_data);
+        this.setState({ taData: json_data.result });
+      });
   }
 
   render() {
     return (
       <div className="chart">
         REPORT
-        <Pie
-          data={{
-            labels: this.state.data.labels,
-            datasets: [
-              {
-                label: "Number of Students in Course",
-                data: this.state.data.data, // data: this.state.data.data
-                backgroundColor: [
-                  "rgba(255, 99, 132, 0.2)",
-                  "rgba(54, 162, 235, 0.2)",
-                ],
-              },
-            ],
-          }}
-        />
+        {this.state.taData &&
+          this.state.taData.map((ta) => (
+            <div key={ta.Paired + ta.Unpaired}>
+              <div>{ta.Paired}</div>
+            </div>
+          ))}
       </div>
     );
   }
