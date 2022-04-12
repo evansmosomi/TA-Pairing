@@ -51,6 +51,8 @@ export default class Confirm extends Component {
       },
     } = this.props;
 
+    /*Saving DATA INTO JSON then to EXCEL */
+
     // const express = require("express");
     // const app = express();
     // const PORT = 3000;
@@ -68,6 +70,25 @@ export default class Confirm extends Component {
     // };
 
     //saveData(values);
+
+    // load JSON data
+    // var jsonInput = [values]
+
+    // // create a blank Workbook object
+    // var workbook = aspose.cells.Workbook()
+
+    // // access default empty worksheet
+    // var worksheet = workbook.getWorksheets().get(0)
+
+    // // set JsonLayoutOptions for formatting
+    // var layoutOptions = aspose.cells.JsonLayoutOptions()
+    // layoutOptions.setArrayAsTable(true)
+
+    // // import JSON data to default worksheet starting at cell A1
+    // aspose.cells.JsonUtility.importData(jsonInput, worksheet.getCells(), 0, 0, layoutOptions)
+
+    // // save resultant file
+    // workbook.save("output.xls", aspose.cells.SaveFormat.AUTO)
 
     return (
       <MuiThemeProvider>
